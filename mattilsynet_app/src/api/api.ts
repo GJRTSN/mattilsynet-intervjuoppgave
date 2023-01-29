@@ -1,10 +1,5 @@
+import { Forflytning } from "./../types/index";
 import axios from "axios";
-
-interface Forflytning {
-  dyreholdId: string;
-  individ: [number, number];
-  produksjonsplassId: string;
-}
 
 export const fetchData = async () => {
   try {
