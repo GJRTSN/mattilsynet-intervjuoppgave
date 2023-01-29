@@ -71,31 +71,25 @@ const App = () => {
                   {/* <option value="" selected="selected">
                     Velg dyrehold
                   </option> */}
-                  <option value="dyreholdid1">Dyrehold 1</option>
-                  <option value="dyreholdid2">Dyrehold 2</option>
-                  <option value="dyreholdid3">Dyrehold 3</option>
-                  <option value="dyreholdid4">Dyrehold 4</option>
+                  <option value="dyreholdid1">Livdyrfjøs</option>
+                  <option value="dyreholdid2">Livdyrhandel</option>
+                  <option value="dyreholdid3">Minkproduksjon</option>
+                  <option value="dyreholdid4">Sauehold</option>
                 </select>
               </div>
               <div className="w-full mt-4">
                 <label className="block font-bold text-gray-700 mb-2">
                   Individ
                 </label>
-                <select
-                  name="selectIndivid"
+                <input
+                  type="text"
+                  name="textIndivid"
                   className="bg-white p-2 rounded-sm w-full"
                   value={individ}
                   onChange={(e) => setIndivid(e.target.value)}
-                >
-                  {/* <option value="" selected="selected">
-                    Velg individ
-                  </option> */}
-                  <option value="individ1">Individ 1</option>
-                  <option value="individ2">Individ 2</option>
-                  <option value="individ3">Individ 3</option>
-                  <option value="individ4">Individ 4</option>
-                </select>
+                />
               </div>
+
               <div className="w-full mt-4">
                 <label className="block font-bold text-gray-700 mb-2">
                   Produksjonsplass
