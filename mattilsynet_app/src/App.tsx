@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import logo from "./images/mattilsynet.png";
 import { fetchData, postData } from "./api/api";
+import { Item } from "./types/index";
 
 const App = () => {
   const [data, setData] = useState([]);
   const [dyreholdId, setDyreholdId] = useState("");
-  const [individ, setIndivid] = useState([0, 0]);
+  const [individ, setIndivid] = useState("");
   const [produksjonsplassId, setProduksjonsplassId] = useState("");
 
   useEffect(() => {
@@ -16,9 +17,9 @@ const App = () => {
     getData();
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    const result = await postData({ someData: "someValue" });
+    // const result = await postData();
     // console.log(result);
   };
 
@@ -32,7 +33,7 @@ const App = () => {
           </h1>
           <h2 className="font-bold mt-10">Tilgjengelige produksjonsplasser:</h2>
           <div className="flex gap-4 w-full">
-            {data.map((item, index) => (
+            {data.map((item: Item, index) => (
               <div className="border-solid border-2 w-full mt-4" key={index}>
                 <h2 className="text-black font-bold">
                   ID: {item.produksjonsplassid}
@@ -108,7 +109,7 @@ const App = () => {
                   {/* <option value="" selected="selected">
                     Velg produksjonsplass
                   </option> */}
-                  {data.map((item, index) => (
+                  {data.map((item: Item, index) => (
                     <option key={index} value={item.produksjonsplassid}>
                       {item.produksjonsplassid}
                     </option>
