@@ -44,7 +44,9 @@ const App = () => {
   return (
     <div className="bg-[#F7F4EE] w-screen h-screen flex justify-center">
       {formSubmitted ? (
-        <h2>Skjema sendt!</h2>
+        <h2 className="text-gray-700 mt-36 font-bold text-3xl">
+          Skjema sendt!
+        </h2>
       ) : (
         <div className="w-3/5">
           <img src={logo} className="w-40 mt-8" alt="Logo" />
