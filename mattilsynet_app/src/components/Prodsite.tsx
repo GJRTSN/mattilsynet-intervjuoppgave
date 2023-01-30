@@ -38,7 +38,11 @@ const Prodsite = () => {
               <li className="text-black bg-gray-100">Bygningsnummer:</li>
               <li className="text-black bg-gray-100 ">{item.bygningsnummer}</li>
               <li className="text-black ">Koordinater:</li>
-              <li className="text-black  ">{item.koordinater}</li>
+              <li className="text-black  ">
+                {item.koordinater &&
+                  JSON.parse(item.koordinater).coordinates.toString()}
+              </li>
+
               <li className="text-black bg-gray-100">Koordinatsystem:</li>
               <li className="text-black  bg-gray-100">
                 {item.koordinatsystem}
