@@ -36,9 +36,9 @@ const App = () => {
       console.log(response);
     });
     setFormSubmitted(true);
-    setTimeout(() => {
-      window.location.href = "https://mattilsynet.no";
-    }, 2000);
+    // setTimeout(() => {
+    //   window.location.href = "https://mattilsynet.no";
+    // }, 2000);
   };
 
   return (
