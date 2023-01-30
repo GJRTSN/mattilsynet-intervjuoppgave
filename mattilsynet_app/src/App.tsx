@@ -73,10 +73,10 @@ const App = () => {
                     onChange={(e) => setDyreholdId(e.target.value)}
                   >
                     <option value="">Velg dyrehold</option>
-                    <option value="dyreholdid1">Livdyrfjøs</option>
-                    <option value="dyreholdid2">Livdyrhandel</option>
-                    <option value="dyreholdid3">Minkproduksjon</option>
-                    <option value="dyreholdid4">Sauehold</option>
+                    <option value="livdyrfjos">Livdyrfjøs</option>
+                    <option value="livdyrhandel">Livdyrhandel</option>
+                    <option value="minkproduksjon">Minkproduksjon</option>
+                    <option value="sauehold">Sauehold</option>
                   </select>
                 </div>
                 <div className="w-full mt-4">
