@@ -36,13 +36,13 @@ const App = () => {
       console.log(response);
     });
     setFormSubmitted(true);
-    // setTimeout(() => {
-    //   window.location.href = "https://mattilsynet.no";
-    // }, 2000);
+    setTimeout(() => {
+      window.location.href = "https://mattilsynet.no";
+    }, 2000);
   };
 
   return (
-    <div className="bg-[#F7F4EE] w-screen h-screen flex justify-center">
+    <div className="bg-[#F7F4EE] w-screen h-full min-h-screen flex justify-center pb-24">
       {formSubmitted ? (
         <h2 className="text-gray-700 mt-36 font-bold text-3xl">
           Skjema sendt!
@@ -50,11 +50,11 @@ const App = () => {
       ) : (
         <div className="w-3/5">
           <img src={logo} className="w-40 mt-8" alt="Logo" />
-          <div className="w-full bg-white mt-8 p-6">
-            <h1 className="text-black text-3xl font-bold mt-2">
+          <div className="w-full bg-white mt-8 p-6 rounded-md">
+            <h1 className="text-[#403F3F] text-5xl mt-2">
               Registrer forflytning
             </h1>
-            <h2 className="font-bold mt-10">
+            <h2 className="font-bold text-[#403F3F] mt-10">
               Tilgjengelige produksjonsplasser:
             </h2>
             <div className="flex gap-4 w-full">
@@ -72,9 +72,7 @@ const App = () => {
                     value={dyreholdId}
                     onChange={(e) => setDyreholdId(e.target.value)}
                   >
-                    {/* <option value="" selected="selected">
-                    Velg dyrehold
-                  </option> */}
+                    <option value="">Velg dyrehold</option>
                     <option value="dyreholdid1">Livdyrfjøs</option>
                     <option value="dyreholdid2">Livdyrhandel</option>
                     <option value="dyreholdid3">Minkproduksjon</option>
@@ -113,9 +111,7 @@ const App = () => {
                     value={produksjonsplassId}
                     onChange={(e) => setProduksjonsplassId(e.target.value)}
                   >
-                    {/* <option value="" selected="selected">
-                    Velg produksjonsplass
-                  </option> */}
+                    <option value="">Velg produksjonsplass</option>
                     {data.map((item: Item, index) => (
                       <option key={index} value={item.produksjonsplassid}>
                         {item.produksjonsplassid}
