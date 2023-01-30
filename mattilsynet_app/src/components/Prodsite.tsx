@@ -18,7 +18,7 @@ const Prodsite = () => {
     <>
       {data.map((item: Item, index) => (
         <div
-          className="border-solid border-2 w-full mt-4 p-2 rounded-md"
+          className="border-solid border-2 w-full mt-4 p-2 rounded-md  hover:border-[#005D7C]"
           key={index}
         >
           <h2
@@ -27,18 +27,19 @@ const Prodsite = () => {
           >
             ID: {item.produksjonsplassid}
           </h2>
+
           {!collapsed && (
             <ul className="list-none grid grid-cols-2 gap-2 text-sm">
-              <li className="text-black ">Kommunenummer:</li>
-              <li className="text-black  ">{item.kommunenummer}</li>
+              <li className="text-black">Kommunenummer:</li>
+              <li className="text-black">{item.kommunenummer}</li>
               <li className="text-black bg-gray-100">Gårdsnummer:</li>
-              <li className="text-black  bg-gray-100">{item.gaardsnummer}</li>
-              <li className="text-black   ">Bruksnummer:</li>
-              <li className="text-black  ">{item.bruksnummer}</li>
+              <li className="text-black bg-gray-100">{item.gaardsnummer}</li>
+              <li className="text-black">Bruksnummer:</li>
+              <li className="text-black">{item.bruksnummer}</li>
               <li className="text-black bg-gray-100">Bygningsnummer:</li>
               <li className="text-black bg-gray-100 ">{item.bygningsnummer}</li>
-              <li className="text-black ">Koordinater:</li>
-              <li className="text-black  ">
+              <li className="text-black">Koordinater:</li>
+              <li className="text-black">
                 {item.koordinater &&
                   JSON.parse(item.koordinater).coordinates.toString()}
               </li>

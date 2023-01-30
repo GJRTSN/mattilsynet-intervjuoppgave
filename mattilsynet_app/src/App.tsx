@@ -61,7 +61,7 @@ const App = () => {
               <Prodsite />
             </div>
             <div className="flex justify-center text-center">
-              <form className="bg-gray-200 border-solid border-2 mt-6 p-6 w-1/3 flex flex-col justify-center items-center">
+              <form className="bg-gray-200 border-solid rounded-md border-2 mt-6 p-6 w-1/3 flex flex-col justify-center items-center">
                 <div className="w-full">
                   <label className="block font-bold text-gray-700 mb-2">
                     Dyrehold
